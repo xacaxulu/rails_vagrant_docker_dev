@@ -20,6 +20,11 @@ vagrant provision
 ``` shell
 vagrant ssh
 cd /vagrant
+ls
+    vagrant@ubuntu-14:/vagrant$ ls
+    app  CHANGELOG.md  config.ru  docker-compose.yml  Gemfile       lib      log     Rakefile   spec  Vagrantfile
+    bin  config        db         Dockerfile          Gemfile.lock  LICENSE  public  README.md  tmp   vendor
+
 ```
 (code has been shared via directives in Vagrantfile NFS)
 
