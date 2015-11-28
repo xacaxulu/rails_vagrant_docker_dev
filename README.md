@@ -29,12 +29,12 @@ ls
 (code has been shared via directives in Vagrantfile NFS)
 
 
-# Build new docker image from Dockerfile
+# Build new docker image from Dockerfile named demo
 ``` shell
 sudo docker build -t demo .
 ```
 
-# Start docker container named demo_container from the image named demo.
+# Start docker container named demo_container from the image named demo
 ``` shell
 ssudo docker run -dP --name demo_container -p 3000:3000 demo
 ```
@@ -44,12 +44,12 @@ ssudo docker run -dP --name demo_container -p 3000:3000 demo
 sudo docker ps
 ```
 
-# Run RSpec inside of the container.
+# Run RSpec inside of the container
 ``` shell
 sudo docker exec demo_container bin/rake spec
 ```
-# Run migrations for development
+# Run migrations for development inside the container
 ``` shell
-sudo docker run -it demo_container bin/rake db:migrate RAILS_ENV=development
+sudo docker exec demo_container bin/rake db:migrate RAILS_ENV=development
 ```
 # From your Host computer, you should be able to access the Rails app @ http://localhost:1234/
