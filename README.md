@@ -34,23 +34,22 @@ ls
 sudo docker build -t demo .
 ```
 
-# Start docker container 
+# Start docker container named demo_container from the image named demo.
 ``` shell
-sudo docker run -dP -p 3000:3000 demo
+ssudo docker run -dP --name demo_container -p 3000:3000 demo
 ```
 
-# Get docker container name 
+# See docker container named docker_container is a running docker process
 ``` shell
 sudo docker ps
 ```
-Look for the running container. It will have a silly name like fabulous_turing
 
 # Run RSpec inside of the container.
 ``` shell
-sudo docker exec <container_name> bin/rake spec
+sudo docker exec demo_container bin/rake spec
 ```
 # Run migrations for development
 ``` shell
-sudo docker run -it <container_name> bin/rake db:migrate RAILS_ENV=development
+sudo docker run -it demo_container bin/rake db:migrate RAILS_ENV=development
 ```
 # From your Host computer, you should be able to access the Rails app @ http://localhost:1234/
