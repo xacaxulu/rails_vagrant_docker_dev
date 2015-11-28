@@ -32,12 +32,19 @@ sudo docker build -t demo .
 ``` shell
 sudo docker run -dP -p 3000:3000 demo
 ```
+
+# Get docker container name 
+``` shell
+sudo docker ps
+```
+Look for the running container. It will have a silly name like fabulous_turing
+
 # Run RSpec inside of the container.
 ``` shell
 sudo docker exec <container_name> bin/rake spec
 ```
 # Run migrations for development
 ``` shell
-sudo docker run -it demo bin/rake db:migrate RAILS_ENV=development
+sudo docker run -it <container_name> bin/rake db:migrate RAILS_ENV=development
 ```
 # From your Host computer, you should be able to access the Rails app @ http://localhost:1234/
