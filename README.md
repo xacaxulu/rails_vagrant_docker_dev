@@ -1,7 +1,8 @@
 # Download and install Vagrant & VirtualBox on your laptop.
-## The main idea here is that you edit your code locally on your host laptop but you execute specs/database migrations inside of Vagrant against the Docker container. This is so that all the heavy lifting is done on the exact same Docker image that you'll containerize in production.
 
-## The other benefit is that everyone can have the exact same development environment via Vagrant while still using their own Text Editors / IDEs and Browsers.
+The main idea here is that you edit your code locally on your host laptop but you execute specs/database migrations inside of Vagrant against the Docker container. This is so that all the heavy lifting is done on the exact same Docker image that you'll containerize in production.
+
+The other benefit is that everyone can have the exact same development environment via Vagrant while still using their own Text Editors / IDEs and Browsers.
 
 # Edit Code Locally => Test/Execute in Vagrant against Docker
 
