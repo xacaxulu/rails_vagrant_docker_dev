@@ -1,0 +1,11 @@
+<% self.page_title = "Welcome to RSpec Rails Examples" %>
+<h1><%= page_title %></h1>
+<% if user_signed_in? %>
+  <p>Hello, <%= current_user.email %></p>
+  <nav><%= button_to "Log out", destroy_user_session_path, method: :delete %></nav>
+<% else %>
+  <p>Not registered? <%= link_to "Sign up", new_user_registration_path %></p>
+  <nav>
+    <%= link_to "Log in", new_user_session_path %>
+  </nav>
+<% end %>
