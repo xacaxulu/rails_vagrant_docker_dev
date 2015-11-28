@@ -1,15 +1,42 @@
 # Download and install Vagrant & VirtualBox on your laptop.
+## The main idea here is that you edit your code locally on your host laptop but you execute specs/database migrations inside of Vagrant against the Docker container. This is so that all the heavy lifting is done on the exact same Docker image that you'll containerize in production.
 
-# from the root of this directory run `vagrant up`
+## The other benefit is that everyone can have the exact same development environment via Vagrant while still using their own Text Editors / IDEs and Browsers.
 
-# vagrant ssh
+# Edit Code Locally => Test/Execute in Vagrant against Docker
 
-# cd /vagrant
+###
 
-# sudo docker build -t demo .
+# Spin up Vagrant Ubuntu box running Docker
 
-# sudo docker run -dP -p 3000:3000 demo
+from the root of this directory run `vagrant up`
 
-# sudo docker run -it demo bin/rake db:migrate RAILS_ENV=development
+# Apply Chef settings located in Vagrantfile
+
+vagrant provision
+
+# login to Ubuntu box
+
+vagrant ssh
+cd /vagrant
+(code has been shared via directives in Vagrantfile NFS)
+
+
+# Build new docker image from Dockerfile
+
+sudo docker build -t demo .
+
+
+# Start docker container 
+
+sudo docker run -dP -p 3000:3000 demo
+
+# Run RSpec inside of the container.
+
+sudo docker exec <container_name> bin/rake spec
+
+# Run migrations for development
+
+sudo docker run -it demo bin/rake db:migrate RAILS_ENV=development
 
 # From your Host computer, you should be able to access the Rails app @ http://localhost:1234/
