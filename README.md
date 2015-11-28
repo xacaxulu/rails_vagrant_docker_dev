@@ -12,31 +12,32 @@
 from the root of this directory run `vagrant up`
 
 # Apply Chef settings located in Vagrantfile
-
+``` shell
 vagrant provision
-
+```
 # login to Ubuntu box
-
+``` shell
 vagrant ssh
 cd /vagrant
+```
 (code has been shared via directives in Vagrantfile NFS)
 
 
 # Build new docker image from Dockerfile
-
+``` shell
 sudo docker build -t demo .
-
+```
 
 # Start docker container 
-
+``` shell
 sudo docker run -dP -p 3000:3000 demo
-
+```
 # Run RSpec inside of the container.
-
+``` shell
 sudo docker exec <container_name> bin/rake spec
-
+```
 # Run migrations for development
-
+``` shell
 sudo docker run -it demo bin/rake db:migrate RAILS_ENV=development
-
+```
 # From your Host computer, you should be able to access the Rails app @ http://localhost:1234/
