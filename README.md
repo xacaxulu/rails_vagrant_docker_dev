@@ -12,7 +12,7 @@ The other benefit is that everyone can have the exact same development environme
 
 from the root of this directory run `vagrant up`
 
-# Apply Chef settings located in Vagrantfile
+# Apply Chef / Shell directives located in Vagrantfile
 ``` shell
 vagrant provision
 ```
