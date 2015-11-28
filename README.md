@@ -1,4 +1,4 @@
-# Download and install [Vagrant](http://vagrantup.com/ "Vagrant") inline link & [VirtualBox](https://www.virtualbox.org/ "VirtualBox") on your laptop.
+# Download and install [Vagrant](http://vagrantup.com/ "Vagrant") & [VirtualBox](https://www.virtualbox.org/ "VirtualBox") on your laptop.
 
 The main idea here is that you edit your code locally on your host laptop but you execute specs/database migrations inside of Vagrant against the Docker container. This is so that all the heavy lifting is done on the exact same Docker image that you'll containerize in production.
 
