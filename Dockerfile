@@ -16,7 +16,7 @@ RUN apt-add-repository ppa:brightbox/ruby-ng
 RUN apt-get -y update
 
 # install ruby2.2
-RUN apt-get -y install ruby2.0 bundler nodejs phantomjs javascript-common
+RUN apt-get -y install ruby1.9.3 bundler nodejs phantomjs javascript-common
 
 RUN mkdir -p /usr/src/app
 COPY . /usr/src/app
