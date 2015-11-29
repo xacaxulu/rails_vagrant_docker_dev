@@ -18,7 +18,7 @@ gem 'therubyracer'
 gem 'quiet_assets', group: :development
 
 group :development, :test do
-  gem 'byebug' # Call 'byebug' in code to stop execution and get a debugger console
+  gem 'byebug'
   gem 'capybara'
   # gem 'chromedriver-helper' # helps with using Chrome in feature specs
   gem 'factory_girl_rails', '~> 4.5'
@@ -28,17 +28,19 @@ group :development, :test do
   gem 'pry-stack_explorer'
   gem 'puffing-billy'
   gem 'rspec-rails', '~> 3.2'
-  gem 'selenium-webdriver' # used by JavaScript-dependent feature specs (`js: true`)
-  gem 'spring' # Spring background-runs app in dev for speed
-  gem 'spring-commands-rspec' # Enable Spring for RSpec
-  gem 'web-console', '~> 2.0' # Access IRB on error pages or by <%= console %> in views
+  gem 'selenium-webdriver'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'web-console', '~> 2.0'
 end
 
 group :test do
   gem 'database_cleaner'
   gem 'email_spec'
-  gem 'poltergeist' # helps with using PhantomJS headless browser in feature specs
+  gem 'poltergeist'
   gem 'shoulda-matchers', '3.0.0.rc1'
   gem 'vcr'
   gem 'webmock'
 end
+
+ruby '1.9.3'

@@ -36,7 +36,7 @@ sudo docker build -t demo .
 
 # Start docker container named demo_container from the image named demo
 ``` shell
-ssudo docker run -dP --name demo_container -p 3000:3000 demo
+sudo docker run -dP --name demo_container -p 3000:3000 demo
 ```
 
 # See docker container named docker_container is a running docker process
