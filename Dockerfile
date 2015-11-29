@@ -5,7 +5,7 @@ MAINTAINER James Denman <james.denman@levvel.io>
 EXPOSE 3000
 RUN apt-get -qy update
 RUN apt-get -qy upgrade
-
+RUN apt-get -y install sqlite3 libsqlite3-dev curl build-essential zlib1g-dev libssl-dev libreadline6-dev libyaml-dev
 RUN apt-get -qy install build-essential
 RUN apt-get -qy install wget
 RUN apt-get -qy install curl
