@@ -42,5 +42,3 @@ group :test do
   gem 'vcr'
   gem 'webmock'
 end
-
-ruby '2.0.0'
