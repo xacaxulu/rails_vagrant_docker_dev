@@ -6,7 +6,7 @@ services:
 language: ruby
 
 rvm:
-  - 1.9.3
+  - 2.0.0
 addons:
   firefox: "38.0.5" 
 
