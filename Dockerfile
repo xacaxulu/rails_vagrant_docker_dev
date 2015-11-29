@@ -14,9 +14,9 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-software-propert
 # add brightbox's repo, for ruby2.0
 RUN apt-add-repository ppa:brightbox/ruby-ng
 RUN apt-get -y update
-
+RUN apt-get remove ruby*
 # install ruby2.2
-RUN apt-get -y install ruby1.9.3 bundler nodejs phantomjs javascript-common
+RUN apt-get -y install ruby2.0 bundler nodejs phantomjs javascript-common
 
 RUN mkdir -p /usr/src/app
 COPY . /usr/src/app

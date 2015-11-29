@@ -18,7 +18,7 @@ gem 'therubyracer'
 gem 'quiet_assets', group: :development
 
 group :development, :test do
-  # gem 'byebug'
+  gem 'byebug'
   gem 'capybara'
   # gem 'chromedriver-helper' # helps with using Chrome in feature specs
   gem 'factory_girl_rails', '~> 4.5'
@@ -42,3 +42,5 @@ group :test do
   gem 'vcr'
   gem 'webmock'
 end
+
+ruby '2.0.0'
