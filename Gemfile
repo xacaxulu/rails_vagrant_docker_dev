@@ -43,4 +43,4 @@ group :test do
   gem 'webmock'
 end
 
-ruby '2.0.0'
+ruby '2.1.3'
