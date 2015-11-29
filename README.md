@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/xacaxulu/rails_vagrant_docker_dev.svg)](https://travis-ci.org/xacaxulu/rails_vagrant_docker_dev)
+
 # Download and install [Vagrant](http://vagrantup.com/ "Vagrant") & [VirtualBox](https://www.virtualbox.org/ "VirtualBox") on your laptop.
 
 The main idea here is that you edit your code locally on your host laptop but you execute specs/database migrations inside of Vagrant against the Docker container. This is so that all the heavy lifting is done on the exact same Docker image that you'll containerize in production.
@@ -21,9 +23,9 @@ vagrant provision
 vagrant ssh
 cd /vagrant
 ls
-    vagrant@ubuntu-14:/vagrant$ ls
-    app  CHANGELOG.md  config.ru  docker-compose.yml  Gemfile       lib      log     Rakefile   spec  Vagrantfile
-    bin  config        db         Dockerfile          Gemfile.lock  LICENSE  public  README.md  tmp   vendor
+vagrant@ubuntu-14:/vagrant$ ls
+app  CHANGELOG.md  config.ru  docker-compose.yml  Gemfile       lib      log     Rakefile   spec  Vagrantfile
+bin  config        db         Dockerfile          Gemfile.lock  LICENSE  public  README.md  tmp   vendor
 
 ```
 (code has been shared via directives in Vagrantfile NFS)
